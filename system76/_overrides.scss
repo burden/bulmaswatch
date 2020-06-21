@@ -1,0 +1,326 @@
+// Overrides
+@if $bulmaswatch-import-font {
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@300;400;700&display=swap');
+}
+.content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $warm-grey;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: $warm-grey;
+  }
+}
+
+.title{
+  color: $warm-grey;
+  
+  &.is-1,
+  &.is-2,
+  &.is-3,
+  &.is-4 {
+    color: $warm-grey;
+  }
+  &.is-1 {
+    font-family: $family-slab;
+    font-size: 64px;
+    letter-spacing: 2px;
+    line-height: 64px;
+  }
+  &.is-2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
+    letter-spacing: 6px;
+  }
+  &.is-3 {
+    font-family: $family-slab;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+  &.is-4 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 40px;
+    line-height: 58px;
+  }
+  &.is-5,
+  &.is-6 {
+    color: $grey-lighter;
+  }
+}
+
+.subtitle {
+  color: $warm-grey;
+  
+  &.is-1,
+  &.is-2 {
+    color: $warm-grey;
+  }
+  &.is-1 {
+    font-family: $family-slab;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  &.is-2 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  
+  &.is-3,
+  &.is-4,
+  &.is-5,
+  &.is-6, {
+    color: $grey-lighter;
+  }
+}
+
+a.button {
+  border: 1px solid $curiosity-orange;
+  color: $curiosity-orange;
+
+  &:hover {
+    border: 1px solid $link-hover;
+  }
+
+  &.is-hovered {
+    border: 1px solid $link;
+  }
+
+  &.is-outlined {
+    border: 1px solid $warm-grey;
+    color: $warm-grey;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  font-family: $family-slab;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border: 1px solid $curiosity-orange;
+  color: $curiosity-orange;
+  
+  &:hover {
+    color: $link;
+    border: 1px solid $link;
+  }
+  
+  &.is-active,
+  &.is-focused,
+  &:active,
+  &:focus {
+    box-shadow: inset 1px 1px 4px rgba($grey-darker, 0.3);
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      &.is-hovered,
+      &:hover {
+        background-color: darken($color, 10);
+        box-shadow: 1px 1px 3px darken($color, 20%);
+      }
+      &.is-active,
+      &.is-focused,
+      &:active,
+      &:focus {
+        box-shadow: inset 1px 0 3px rgba($grey-darker, 0.3);
+        background-color: darken($color, 10);
+      }
+    }
+  }
+}
+
+.input,
+.textarea {
+  box-shadow: none;
+}
+.input[type="text"]:active {
+  transition: border-color 200ms ease;
+  color: #fff;
+}
+.input[type="text"]:hover,
+.input[type="text"]:focus,
+.input[type="text"]:active {
+  outline: none;
+}
+
+.p1 {
+  font-family: $family-slab;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.p2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.notification {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      a:not(.button) {
+        color: $color-invert;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.pagination {
+  .is-current {
+    background-color: $curiosity-orange;
+    color: $black;
+    border: 1px solid $curiosity-orange;
+  }
+}
+
+.progress {
+  height: $size-small;
+}
+
+.progress,
+.tag {
+  border-radius: $radius;
+}
+
+.navbar:not(.is-transparent) {
+  background-color: $black-ter;
+  .navbar-menu {
+    background-color: $black-ter;
+  }
+  .navbar-item,
+  .navbar-link {
+    color: $white;
+    &.has-dropdown:hover .navbar-link,
+    &:hover {
+      background-color: rgba($white, 0.05);
+    }
+    &.is-active,
+    &:active {
+      background-color: rgba($black-ter, 0.05);
+      color: $primary;
+    }
+  }
+  .navbar-burger:hover {
+    background-color: rgba($black-ter, 0.05);
+  }
+  .navbar-link::after {
+    border-color: $white;
+  }
+  @include desktop {
+    .navbar-dropdown .navbar-item {
+      color: $grey-dark;
+      &:hover {
+        background-color: rgba($black-ter, 0.05);
+      }
+      &.is-active,
+      &:active {
+        color: $primary;
+      }
+      strong {
+        color: $grey;
+      }
+    }
+  }
+  .navbar-burger {
+    span {
+      background-color: $white;
+    }
+  }
+  strong {
+    color: $white-ter;
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      background-color: $color;
+      .navbar-menu {
+        background-color: $color;
+      }
+      .navbar-item,
+      .navbar-link {
+        @media (max-width: $desktop) {
+          color: $color-invert;
+        }
+        &.is-active,
+        &:active {
+          color: $color-invert;
+        }
+      }
+      .navbar-burger {
+        &:hover {
+          background-color: darken($color, 5);
+        }
+        span {
+          background-color: $color-invert;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  // Colors
+  .navbar-item {
+    text-transform: lowercase;
+    font-family: $family-slab;
+    font-weight: 300;
+  }
+  .navbar:not(.is-transparent) {
+    background-color: $black-ter;
+  }
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      .navbar {
+        background: none;
+      }
+      .navbar-item,
+      .navbar-link {
+        color: $color-invert;
+        &.is-active,
+        &:hover {
+          background-color: darken($color, 10);
+          color: $color-invert;
+        }
+        &:after {
+          border-color: $color-invert;
+        }
+      }
+      .navbar-menu {
+        background-color: $color;
+      }
+      .navbar-burger {
+        span {
+          background-color: $color-invert;
+        }
+      }
+      @include desktop {
+        .navbar-dropdown a.navbar-item {
+          color: $grey-dark;
+        }
+      }
+    }
+  }
+}

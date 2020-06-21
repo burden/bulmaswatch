@@ -1,0 +1,53 @@
+////////////////////////////////////////////////
+// SYSTEM 76
+////////////////////////////////////////////////
+
+$curiosity-orange: #FFAD00;
+$pop-blue: #48B9C7;
+$warm-grey: #574F4A;
+$lumen-yellow: #F7E062;
+$discovery: #102A4C;
+$dirty: #AF5C02;
+
+$grey-darker: darken($warm-grey, 15%);
+$grey-dark: darken($warm-grey, 10%);
+$grey: $warm-grey;
+$grey-light: lighten($warm-grey, 20%);
+$grey-lighter: lighten($warm-grey, 40%);
+// $warning-invert: #fff;
+$white-ter: lighten($warm-grey, 65%);
+$primary: $pop-blue;
+$secondary: $curiosity-orange;
+$info: $discovery;
+$warning: $lumen-yellow;
+
+$text: $warm-grey;
+$link: $dirty;
+$link-hover: $dirty;
+$link-visited: $dirty;
+$button-focus-border-color: $curiosity-orange;
+
+$radius: 4px;
+
+$family-sans-serif: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$family-slab: 'Roboto Slab', serif;
+$family-secondary: $family-slab;
+
+$body-size: 16px;
+
+// $link: #8e8c84;
+// 
+$pagination-background-color: $grey-lighter;
+// 
+// $navbar-background-color: $grey-dark;
+// $navbar-item-color: $grey-light;
+// $navbar-item-hover-color: $white-ter;
+// $navbar-item-active-color: $white-ter;
+// $navbar-item-hover-background-color: $grey-darker;
+// $navbar-dropdown-arrow: $navbar-item-color;
+
+$bulmaswatch-import-font: true !default;
+// 
+// $card-shadow: 0 2px 3px rgba($grey-dark, 0.1), 0 0 0 1px rgba($grey-dark, 0.1);
+// 
+// $control-height: 2.572em;
