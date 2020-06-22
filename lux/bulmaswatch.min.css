@@ -1,6 +1,6 @@
 /*! bulmaswatch v0.8.1 | MIT License */
 /*! bulma.io v0.8.1 | MIT License | github.com/jgthms/bulma */
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -7130,6 +7130,43 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 3px; }
 
+.button {
+  transition: all 200ms ease;
+  text-transform: uppercase;
+  font-weight: 700; }
+  .button.is-active, .button.is-focused, .button:active, .button:focus {
+    box-shadow: 0 0 0 2px rgba(31, 155, 207, 0.25); }
+  .button.is-white.is-active, .button.is-white.is-focused, .button.is-white:active, .button.is-white:focus {
+    border-color: white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25); }
+  .button.is-black.is-active, .button.is-black.is-focused, .button.is-black:active, .button.is-black:focus {
+    border-color: #0a0a0a;
+    box-shadow: 0 0 0 2px rgba(10, 10, 10, 0.25); }
+  .button.is-light.is-active, .button.is-light.is-focused, .button.is-light:active, .button.is-light:focus {
+    border-color: whitesmoke;
+    box-shadow: 0 0 0 2px rgba(245, 245, 245, 0.25); }
+  .button.is-dark.is-active, .button.is-dark.is-focused, .button.is-dark:active, .button.is-dark:focus {
+    border-color: #363636;
+    box-shadow: 0 0 0 2px rgba(54, 54, 54, 0.25); }
+  .button.is-primary.is-active, .button.is-primary.is-focused, .button.is-primary:active, .button.is-primary:focus {
+    border-color: #222;
+    box-shadow: 0 0 0 2px rgba(34, 34, 34, 0.25); }
+  .button.is-link.is-active, .button.is-link.is-focused, .button.is-link:active, .button.is-link:focus {
+    border-color: #7f888f;
+    box-shadow: 0 0 0 2px rgba(127, 136, 143, 0.25); }
+  .button.is-info.is-active, .button.is-info.is-focused, .button.is-info:active, .button.is-info:focus {
+    border-color: #3298dc;
+    box-shadow: 0 0 0 2px rgba(50, 152, 220, 0.25); }
+  .button.is-success.is-active, .button.is-success.is-focused, .button.is-success:active, .button.is-success:focus {
+    border-color: #4bbf73;
+    box-shadow: 0 0 0 2px rgba(75, 191, 115, 0.25); }
+  .button.is-warning.is-active, .button.is-warning.is-focused, .button.is-warning:active, .button.is-warning:focus {
+    border-color: #ffdd57;
+    box-shadow: 0 0 0 2px rgba(255, 221, 87, 0.25); }
+  .button.is-danger.is-active, .button.is-danger.is-focused, .button.is-danger:active, .button.is-danger:focus {
+    border-color: #d9534f;
+    box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.25); }
+
 .input,
 .textarea {
   transition: all 200ms ease;
@@ -7157,7 +7194,8 @@ h6 {
 
 @media screen and (max-width: 1023px) {
   .navbar .navbar-menu {
-    background-color: #222; } }
+    background-color: #222;
+    border-radius: 0; } }
 
 .hero .navbar {
   background-color: #222; }

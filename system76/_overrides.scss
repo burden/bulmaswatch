@@ -145,7 +145,18 @@ a.button {
     }
   }
 }
-
+button.is-primary {
+  color: #000 !important;
+}
+button.is-link {
+  background-color: $curiosity-orange !important;
+  color: #000 !important;
+  &:hover {
+    background-color: darken($curiosity-orange, 10);
+    box-shadow: 1px 1px 3px darken($curiosity-orange, 20%) !important;
+    color: #000 !important;
+  }
+}
 .input,
 .textarea {
   box-shadow: none;
@@ -160,6 +171,9 @@ a.button {
   outline: none;
 }
 
+.select::after {
+  border-color: #000 !important;
+}
 .p1 {
   font-family: $family-slab;
   font-size: 24px;
