@@ -85,7 +85,17 @@
     color: $grey-lighter;
   }
 }
-
+.button {
+  &.is-link {
+    background-color: $curiosity-orange !important;
+    color: #000;
+     &:hover {
+      color: #000;
+      background-color: $curiosity-orange !important;
+      box-shadow: 1px 1px 3px darken($curiosity-orange, 20%) !important;
+    }
+  }
+}
 a.button {
   border: 1px solid $curiosity-orange;
   color: $curiosity-orange;

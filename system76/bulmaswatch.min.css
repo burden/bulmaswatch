@@ -7260,6 +7260,17 @@ a.button {
     box-shadow: inset 1px 0 3px rgba(46, 41, 39, 0.3);
     background-color: #ee1742; }
 
+button.is-primary {
+  color: #000 !important; }
+
+button.is-link {
+  background-color: #FFAD00 !important;
+  color: #000 !important; }
+  button.is-link:hover {
+    background-color: #cc8a00;
+    box-shadow: 1px 1px 3px #996800 !important;
+    color: #000 !important; }
+
 .input,
 .textarea {
   box-shadow: none; }
@@ -7272,6 +7283,9 @@ a.button {
 .input[type="text"]:focus,
 .input[type="text"]:active {
   outline: none; }
+
+.select::after {
+  border-color: #000 !important; }
 
 .p1 {
   font-family: "Roboto Slab", serif;
