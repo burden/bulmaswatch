@@ -85,6 +85,11 @@
     color: $grey-lighter;
   }
 }
+
+a {
+  color: $dirty;
+}
+
 .button {
   &.is-link {
     background-color: $curiosity-orange !important;
@@ -96,9 +101,10 @@
     }
   }
 }
+
 a.button {
-  border: 1px solid $curiosity-orange;
-  color: $curiosity-orange;
+  // border: 1px solid $curiosity-orange;
+  // color: $curiosity-orange;
 
   &:hover {
     border: 1px solid $link-hover;
@@ -125,10 +131,10 @@ a.button {
   border: 1px solid $curiosity-orange;
   color: $curiosity-orange;
   
-  &:hover {
-    color: $link;
-    border: 1px solid $link;
-  }
+  // &:hover {
+  //   color: $link;
+  //   border: 1px solid $link;
+  // }
   
   &.is-active,
   &.is-focused,
@@ -155,18 +161,20 @@ a.button {
     }
   }
 }
+
 button.is-primary {
   color: #000 !important;
 }
-button.is-link {
-  background-color: $curiosity-orange !important;
-  color: #000 !important;
-  &:hover {
-    background-color: darken($curiosity-orange, 10);
-    box-shadow: 1px 1px 3px darken($curiosity-orange, 20%) !important;
-    color: #000 !important;
-  }
-}
+
+// button.is-link {
+//   background-color: $curiosity-orange !important;
+//   color: #000 !important;
+//   &:hover {
+//     background-color: darken($curiosity-orange, 10);
+//     box-shadow: 1px 1px 3px darken($curiosity-orange, 20%) !important;
+//     color: #000 !important;
+//   }
+// }
 .input,
 .textarea {
   box-shadow: none;
